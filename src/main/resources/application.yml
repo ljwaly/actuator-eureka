@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: eureka-client
+
+server:
+  port: 8763
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    appname: eureka-client
+
+    
+
+feign:
+  hystrix:
+    enabled: true
+    
+management:
+  port: 8763
+  security:
+    enabled: false
+  endpoint:
+    health:
+      sensitive: false
+    shutdown:
+      enabled: true
+    
+info: 
+  aaa:
+    name: ljw1
+    age: 301
+  bbb:
+    name: ly1
+    age: 301
